@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .btn{
+            padding: 10px;
+            margin: 50px;
+        }
+        .btn:hover{
+            background-color: tomato;
+        }
+        .bar{
+            background-color: rgb(140, 235, 219);
+            color: whitesmoke;
+        }
+        .bar li{
+            float: left;
+            list-style: none;
+            padding-left: 25px;
+            padding-right: 25px;
+           
+
+        }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="bar">
+            <ul>
+                <li><a href="Sample.html">Home</a></li>
+                <li><a href="Tutorial.html">Tutorial</a></li>
+                <li><a href="submit.html">Submit</a></li>
+                <li><a href="viewresults.html">View Result</a></li>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search here">
+                </div>
+                
+            </ul>
+       </nav>
+    </header>
+    <!-- <a href="Sample.html">GO BACK</a> -->
+    <!-- <form action="/action_page.php">
+        <fieldset id="group1">
+            <h3>Your data type</h3>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+         <label for="html">Ensemble of protein sequences in FASTA format
+        </label><br>
+         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+         <label for="javascript">Multiple sequence alignment (MSA) data in FASTA format
+        </label><br><br>
+    </fieldset>
+
+    <fieldset id="group2">
+        <h3>Input type</h3>
+    <form action="/action_page.php">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+         <label for="html">Paste a sequence
+        </label><br>
+         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+         <label for="javascript">Upload a file
+        </label><br><br>
+    </fieldset>
+          <input type="submit" value="Submit">
+        </form> -->
+        
+        <form>
+            <fieldset id="group1" >
+                <h3>Your data type</h3>
+              <input type="radio" value="value1" name="group1" class="group1class">
+              <label for="html">Ensemble of protein sequences in FASTA format
+            </label><br>
+              <input type="radio" value="value2" name="group1" class="group1class group2class">
+              <label for="javascript">Multiple sequence alignment (MSA) data in FASTA format
+            </label><br><br>
+            </fieldset>
+
+            <fieldset id="subgroup1A">
+                <h3>Additional Calculations</h3>
+              <input type="checkbox" value="value1" name="group1">
+              <label for="html">Hydrophobic profile of all sequences
+            </label><br>
+              <input type="checkbox" value="value2" name="group1">
+              <label for="javascript">Protein parameters in "ProtParam" style                  
+            </label><br><br>
+            </fieldset>
+
+            <fieldset id="subgroup1B">
+                <h3>Sequence Filtering</h3>
+              <input type="checkbox" value="value1" name="group1">
+              <label for="html">Only filter
+            </label><br>
+              <input type="text" value="Enter a keyword" name="group1">
+              <label for="javascript">Select sequences with a keyword in the header  
+            </label><br> 
+            <input type="text" value="Enter a character" name="group1">
+            <label for="javascript">Reject sequences with an ambiguous character 
+            </label><br> 
+              <input type="text" value="Enter min length" name="group1">
+              <label for="javascript">Select sequences with minimum length   
+            </label><br>
+            <input type="text" value="Enter max length" name="group1">
+            <label for="javascript">Select sequences with maximum length    
+            </label><br><br>
+            </fieldset>
+
+            <fieldset id="subgroup2B">
+                <h3> Additional options for "MSA" (Optional)
+                </h3>
+              <input type="number" value="1" name="group2">
+              <label for="javascript">Similarity Threshold  
+            <input type="number" value="0" name="group2">
+            <label for="javascript">Pseudo Count  
+            </label><br><br>
+        </fieldset> 
+
+
+
+          
+            <fieldset id="group2">
+                <h3>Input type</h3>
+              <input type="radio" value="value1" name="group3" class="upload">
+              <label for="html">Upload a file
+            </label><br>
+              <input type="radio" value="value2" name="group3" class="paste">
+              <label for="javascript">Paste a sequence
+            </label><br><br>
+            </fieldset>
+              
+            <!-- <fieldset>
+            <input type="file" id="file">
+            <label for="javascript"> Choose file
+            </label> <br>
+        </fieldset> -->
+
+        <!-- <label for="myfile">Input:</label> -->
+        
+        <fieldset  id="uploadId">
+  <input type="file" name="myfileupload" ><br><br>
+  <!-- <input type="submit" value="upload"> -->
+</fieldset>
+
+<fieldset id="pasteId">
+    <!-- <label for="myfile">Input:</label> -->
+<input type="text" name="myfilepaste" >
+<label for="javascript">Paste the sequence 
+    <br><br>
+<!-- <input type="submit" value="upload"> -->
+</fieldset>
+
+
+    
+            <input src="Sample.html" type="submit" value="Submit">   
+          </form>
+       
+          <script>
+            
+              var upload=document.getElementById("uploadId")
+              var displasettingupload= upload.style.display
+              upload.style.display = 'none'
+              document.querySelector(".upload").addEventListener("click", function(){
+                upload.style.display = 'block'
+              })
+
+              var paste=document.getElementById("pasteId")
+              var displasettingpaste= paste.style.display
+              paste.style.display = 'none'
+              document.querySelector(".paste").addEventListener("click", function(){
+                paste.style.display = 'block'
+              })
+
+            // if(document.querySelector(".upload").addEventListener("click")){
+            //     function upload(){
+            //     upload.style.display = 'block'
+            //   }
+            // }  else if (document.querySelector(".paste").addEventListener("click")){
+                
+            // }
+                var submenu1A= document.getElementById("subgroup1A")
+                var displaysubmenu1A = submenu1A.style.display;
+                submenu1A.style.display = 'none';
+
+            document.querySelector(".group1class").addEventListener("click", function(){
+                // var submenu= document.getElementById("subgroup1")
+                // var displaySetting = submenu.style.display;
+
+                // if (displaySetting == 'block') {
+      // clock is visible. hide it
+      submenu1A.style.display = 'block';
+      // change button text
+    //   clockButton.innerHTML = 'Show clock';
+    // }
+    // else {
+    //   // clock is hidden. show it
+    // //   myClock.style.display = 'block';
+    //   // change button text
+    //   clockButton.innerHTML = 'Hide clock';
+    });
+       var submenu1B= document.getElementById("subgroup1B")
+                var displaySetting1B = submenu1B.style.display;
+                submenu1B.style.display = 'none';
+            document.querySelector(".group1class").addEventListener("click", function(){
+                submenu1B.style.display = 'block';
+            }
+//   }
+               
+                // }
+            )
+
+            var submenu2B= document.getElementById("subgroup2B")
+                var displaySetting2B = submenu2B.style.display;
+                submenu2B.style.display = 'none';
+            document.querySelector(".group2class").addEventListener("click", function(){
+                submenu2B.style.display = 'block';
+            })
+        
+        </script>
+</body>
+</html>

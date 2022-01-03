@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn{
+            padding: 10px;
+            margin: 50px;
+        }
+        .btn:hover{
+            background-color: tomato;
+        }
+        .bar{
+            background-color: rgb(140, 235, 219);
+            color: whitesmoke;
+        }
+        .bar li{
+            float: left;
+            list-style: none;
+            padding-left: 25px;
+            padding-right: 25px;
+           
+
+        }
+</style>
+<body>
+    <header>
+        <nav class="bar">
+            <ul>
+                <li><a href="Sample.html">Home</a></li>
+                <li><a href="Tutorial.html">Tutorial</a></li>
+                <li><a href="submit.html">Submit</a></li>
+                <li><a href="viewresults.html">View Result</a></li>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Search here">
+                </div>
+                
+            </ul>
+       </nav> 
+    </header>
+    <form action="/action_page.php">
+        <label for="fname">Enter your job ID here</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>
